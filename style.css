@@ -1,0 +1,48 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #004d60; /* Aanpassen aan uw primaire achtergrondkleur */
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #00677f; /* Aanpassen aan de kleur van uw headerachtergrond */
+    padding: 10px;
+    text-align: center;
+}
+
+.logo {
+    max-width: 100px; /* Aanpassen aan de grootte van uw ontwerp */
+    margin-bottom: 10px;
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+}
+
+button {
+    background-color: #00aabb; /* Aanpassen aan uw accentkleur */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #008c99; /* Donkerder voor hovereffect */
+}
+
+#parkingList div {
+    background-color: #003d4f; /* Donkere kleur voor lijstitems */
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* Aanvullende stijlen en media queries voor responsiviteit */
