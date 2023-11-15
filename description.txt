@@ -1,0 +1,46 @@
+Algoritme en werkfasen van JavaScript:
+
+1. Graden naar radialen omzetten (toRadians)
+
+Deze functie zet hoekwaarden om van graden naar radialen, wat noodzakelijk is voor berekeningen in wiskundige formules.
+
+2. Afstand berekenen (calculateDistance)
+
+Deze functie wordt gebruikt om de afstand tussen twee punten op het aardoppervlak te berekenen, gegeven hun breedte- en lengtegraden. Het gebruikt de haversine-formule om de afstand tussen de punten te berekenen.
+
+3. Dichtstbijzijnde parkeerplaatsen vinden (findNearestParkings)
+
+Deze functie neemt de breedte- en lengtegraad van de gebruiker en een array van parkeerplaatsobjecten. Het berekent de afstand van de gebruiker tot elke parkeerplaats, voegt deze afstand toe aan het parkeerplaatsobject, en sorteert vervolgens de array van parkeerplaatsen op afstand en geeft de eerste vijf terug.
+
+4. Parkeerplaatsen weergeven (displayParkings)
+
+Deze functie is verantwoordelijk voor het weergeven van informatie over de parkeerplaatsen op de webpagina. Het maakt de huidige lijst van parkeerplaatsen leeg, creëert nieuwe DOM-elementen voor elke parkeerplaats en voegt ze toe aan de lijst op de pagina.
+
+5. Coördinaten naar klembord kopiëren (copyToClipboard)
+
+Deze functie stelt de gebruiker in staat de coördinaten van een parkeerplaats naar het klembord van de gebruiker te kopiëren.
+
+6. Coördinaten openen in Google Maps (openInGoogleMaps)
+
+Deze functie opent de gegeven coördinaten in Google Maps in een nieuw browsertabblad.
+
+7. Event Handling
+
+    Parkeerplaatsen zoeken (findParking): Wanneer de gebruiker op de knop "Zoeken" klikt, wordt deze functie geactiveerd. Het gebruikt de geolocatie van de browser om de huidige locatie van de gebruiker te bepalen, vervolgens maakt het een aanvraag naar de API om een lijst van parkeerplaatsen te verkrijgen, verwerkt ze met findNearestParkings en toont de resultaten met displayParkings.
+    Terugknop (backButton): Deze knop maakt de lijst van parkeerplaatsen leeg en verbergt de knop zelf.
+
+Werkingsstappen:
+
+    Initialisatie: Bij het laden van de pagina worden event handlers gekoppeld aan de relevante elementen.
+    
+    Gebruikersinteractie: De gebruiker klikt op de knop "Parkeerplaatsen zoeken".
+    
+    Locatiebepaling: Geolocatie wordt gebruikt om de huidige locatie van de gebruiker te bepalen.
+    
+    API-verzoek: Een verzoek wordt naar de API gestuurd om een lijst van parkeerplaatsen te verkrijgen.
+    
+    Data verwerking: De verkregen gegevens worden verwerkt (afstand berekenen, sorteren).
+    
+    Resultaten weergeven: De resultaten worden weergegeven op de webpagina.
+    
+    Extra acties: De gebruiker kan interactie hebben met de resultaten (coördinaten kopiëren, bekijken in Google Maps).
