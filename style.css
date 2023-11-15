@@ -44,5 +44,31 @@ button:hover {
     border-radius: 5px;
     text-align: left;
 }
+/* Stijlen voor de 'Meer informatie' links */
+.parking-item a {
+    color: #00aabb; /* Tekstkleur van de link voor contrast met donkere achtergrond */
+    background-color: rgba(255, 255, 255, 0.2); /* Halfdoorzichtige witte achtergrond */
+    padding: 5px 10px; /* Ruimte rond de tekst */
+    border-radius: 3px; /* Afgeronde hoeken */
+    text-decoration: none; /* Geen onderstreping */
+    display: inline-block; /* Zodat padding en border-radius toegepast worden */
+    margin: 5px 0; /* Ruimte aan de boven- en onderkant */
+    transition: background-color 0.3s; /* Vloeiende overgang voor achtergrondkleur */
+}
 
-/* Aanvullende stijlen en media queries voor responsiviteit */
+.parking-item a:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Meer opvallende achtergrond bij hover */
+    color: #004d60; /* Tekstkleur bij hover */
+}
+
+.footer {
+    background-color: #003d4f;
+    color: #ffffff; 
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000;
+}

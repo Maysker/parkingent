@@ -41,20 +41,17 @@ function displayParkings(parkings) {
         const div = document.createElement('div');
         const coords = `${parking.geo_point_2d.lat}, ${parking.geo_point_2d.lon}`;
         const distanceKm = (parking.distance / 1000).toFixed(2); // Afstand in kilometers
-        const capacity = parking.Capaciteit ? parking.Capaciteit : 'Niet beschikbaar';
-        const infoText = parking.infotekst ? parking.infotekst : '';
+        const capacity = parking.capaciteit ? parking.capaciteit : 'Niet beschikbaar';
         const parkingUrl = parking.url ? `<a href="${parking.url}" target="_blank">Meer informatie</a>` : '';
-
-        const address = parking.straatnaam + (parking.huisnr ? `, ${parking.huisnr}` : ''); // Controleren op huisnummer
+        const address = `${parking.straatnaam}${parking.huisnr ? ' ' + parking.huisnr : ''}`; // Controleren op huisnummer
 
         div.className = 'parking-item';
         div.innerHTML = `
             <h2>${parking.naam}</h2>
-            <p>${address}</p>
+            <p>Adres: ${address}</p>
             <p>Capaciteit: ${capacity}</p>
-            <p>${infoText}</p>
-            ${parkingUrl}
             <p>Afstand: ${distanceKm} km</p>
+            <p>${parkingUrl}</p>
             <button onclick="copyToClipboard('${coords}')">Coördinaten kopiëren</button>
             <button onclick="openInGoogleMaps('${coords}')">Open in Google Maps</button>
         `;
@@ -102,6 +99,7 @@ document.getElementById('findParking').addEventListener('click', function() {
         alert('Geolocatie wordt niet ondersteund door uw browser');
     }
 });
+
 
 document.getElementById('backButton').addEventListener('click', function() {
     this.style.display = 'none'; // Verberg de terugknop
